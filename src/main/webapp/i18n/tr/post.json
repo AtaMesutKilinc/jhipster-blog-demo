@@ -1,0 +1,29 @@
+{
+  "blogApp": {
+    "post": {
+      "home": {
+        "title": "Posts",
+        "refreshListLabel": "Listeyi yenile",
+        "createLabel": "Yeni Post ekle",
+        "createOrEditLabel": "Yeni Post ekle veya guncelle",
+        "notFound": "Posts kaydi bulunamadi"
+      },
+      "created": "{{ param }} ID ile bir Post eklendi",
+      "updated": "{{ param }} nolu Post guncellendi",
+      "deleted": "{{ param }} nolu Post silindi",
+      "delete": {
+        "question": "{{ id }} nolu Post silinecek. Devem etmek istiyor musunuz?"
+      },
+      "detail": {
+        "title": "Post"
+      },
+      "id": "ID",
+      "title": "Title",
+      "content": "Content",
+      "date": "Date",
+      "user": "User",
+      "tag": "Tag",
+      "blog": "Blog"
+    }
+  }
+}

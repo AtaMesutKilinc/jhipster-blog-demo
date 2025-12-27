@@ -1,0 +1,27 @@
+{
+  "blogApp": {
+    "blog": {
+      "home": {
+        "title": "Blogs",
+        "refreshListLabel": "Listeyi yenile",
+        "createLabel": "Yeni Blog ekle",
+        "createOrEditLabel": "Yeni Blog ekle veya guncelle",
+        "notFound": "Blogs kaydi bulunamadi"
+      },
+      "created": "{{ param }} ID ile bir Blog eklendi",
+      "updated": "{{ param }} nolu Blog guncellendi",
+      "deleted": "{{ param }} nolu Blog silindi",
+      "delete": {
+        "question": "{{ id }} nolu Blog silinecek. Devem etmek istiyor musunuz?"
+      },
+      "detail": {
+        "title": "Blog"
+      },
+      "id": "ID",
+      "name": "Name",
+      "handle": "Handle",
+      "post": "Post",
+      "user": "User"
+    }
+  }
+}

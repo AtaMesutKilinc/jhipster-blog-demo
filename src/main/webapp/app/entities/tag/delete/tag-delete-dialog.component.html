@@ -1,0 +1,24 @@
+@if (tag) {
+  <form name="deleteForm" (ngSubmit)="confirmDelete(tag.id!)">
+    <div class="modal-header">
+      <h4 class="modal-title" data-cy="tagDeleteDialogHeading" jhiTranslate="entity.delete.title">Silme işlemini onayla</h4>
+    </div>
+
+    <div class="modal-body">
+      <jhi-alert-error />
+      <p id="jhi-delete-tag-heading" jhiTranslate="blogApp.tag.delete.question" [translateValues]="{ id: tag.id }">
+        {{ tag.id }} nolu Tag silinecek. Devem etmek istiyor musunuz?
+      </p>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+        <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">İptal</span>
+      </button>
+
+      <button id="jhi-confirm-delete-tag" data-cy="entityConfirmDeleteButton" type="submit" class="btn btn-danger">
+        <fa-icon icon="times"></fa-icon>&nbsp;<span jhiTranslate="entity.action.delete">Sil</span>
+      </button>
+    </div>
+  </form>
+}

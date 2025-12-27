@@ -1,0 +1,54 @@
+/**
+ * JDL model for Blog, Post, Tag with built-in User relationships
+ * JHipster 8.11.0 compatible
+ */
+
+application {
+  config {
+    baseName blog
+    applicationType monolith
+    packageName com.jhipster.blog
+    authenticationType jwt
+    prodDatabaseType postgresql
+    devDatabaseType h2Disk
+    serverPort 8080
+    clientFramework angular
+  }
+  entities Blog, Post, Tag
+}
+
+// Entities
+entity Blog {
+  name String required,
+  handle String required
+}
+
+entity Post {
+  title String required,
+  content TextBlob required,
+  date Instant
+}
+
+entity Tag {
+  name String required
+}
+
+// Relationships among custom entities
+relationship OneToMany {
+  Blog to Post
+}
+
+relationship ManyToMany {
+  Post to Tag
+}
+
+// Built-in User relationships
+relationship ManyToOne {
+  Blog to User with builtInEntity
+  Post to User with builtInEntity
+}
+
+// Pagination option
+paginate Blog with pagination
+paginate Post with pagination
+paginate Tag with pagination
